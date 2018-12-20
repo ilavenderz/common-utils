@@ -16,6 +16,18 @@ public class NumberUtils {
         return list.toArray(arr);
     }
 
+    public static Byte[] splitNumber(long number, int size){
+        Byte[] result = new Byte[size];
+        Byte[] arr = splitNumber(number);
+        for(int i = 0; i < arr.length; i++){
+            result[i] = arr[i];
+        }
+        for(int i = arr.length; i < size; i++){
+            result[i] = 0;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(NumberUtils.splitNumber(19870)));
     }
