@@ -46,6 +46,6 @@ public class MhtFileParser {
     }
 
     public static MHTContent modifyHTML(MHTContent content) {
-
+        return null;
     }
 }
